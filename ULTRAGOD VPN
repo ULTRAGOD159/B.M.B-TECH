@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ULTRAGOD PRO VPN</title>
+<style>
+  body {
+    margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #eee;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    height: 100vh;
+  }
+  header {
+    font-size: 2.5rem; font-weight: bold; margin-bottom: 1rem;
+    text-shadow: 0 0 8px #00fff7;
+  }
+  .info {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .info font {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-shadow: 0 0 4px currentColor;
+  }
+  .info font[color="cyan"] { color: cyan; }
+  .info font[color="lime"] { color: lime; }
+  .info font[color="aqua"] { color: aqua; }
+  .info font[color="red"] { color: red; }
+  .info font[color="#CC33FF"] { color: #CC33FF; }
+  .description {
+    max-width: 400px;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: #a0f7f7;
+    text-shadow: 0 0 5px #00fff7;
+  }
+  .status {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: rgba(0,255,247,0.15);
+    box-shadow: 0 0 10px #00fff7;
+  }
+  button {
+    background: #00fff7;
+    border: none;
+    padding: 15px 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #002222;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #00fff7;
+    transition: background 0.3s ease;
+  }
+  button:hover {
+    background: #00c8ba;
+  }
+  footer {
+    position: fixed; bottom: 10px; font-size: 0.9rem; opacity: 0.6;
+  }
+</style>
+</head>
+<body>
+
+<header>ULTRAGOD PRO VPN</header>
+
+<div class="description">
+  Connect to ULTRAGOD PRO VPN for fast, secure, and unlimited access to the internet. Your privacy is our priority.
+</div>
+<div class="data-usage">
+    <span id="upload">↑ 1 KB</span>    nbsp;   nbsp; <span id="download">↑ 3 KB</span>
+  </div>
+
+  <script>
+    let up = 1;
+    let down = 3;
+
+    function formatData(val) 
+      return val >= 1024 ? (val / 1024).toFixed(2) + ' MB' : val.toFixed(1) + ' KB';
+    
+
+    setInterval(() => 
+      up += Math.random() * 40;
+      down += Math.random() * 70;
+      document.getElementById("upload").textContent = `↑{formatData(up)}`;
+<div class="info">
+  <font color="cyan">[MTN-SA]🇿🇦</font>
+  <font color="lime">[LIFETIME]</font>
+  <font color="aqua">[TEST IT]</font>
+  <font color="red">CREATOR: ꧁•⊹ᴜʟᴛʀᴀ ɢᴏᴅ⊹•꧂</font>
+  <font color="#CC33FF">powered by ŤŮMI$0 MØSÅLÅ</font>
+</div>
+
+<div class="status" id="status">Status: Disconnected</div>
+
+<button id="connectBtn">Connect</button>
+
+<footer>Powered by ULTRAGOD</footer>
+
+<script>
+  const status = document.getElementById('status');
+  const btn = document.getElementById('connectBtn');
+  let connected = false;
+
+  btn.addEventListener('click', () => {
+    if(!connected) {status.textContent = 'Status: Connecting...';
+      btn.disabled = true;
+      setTimeout(() => {
+        connected = true;
+        status.textContent = 'Status: Connected';
+        btn.textContent = 'Disconnect';
+        btn.disabled = false;
+      }, 3000);
+    } else {
+      connected = false;
+      status.textContent = 'Status: Disconnected';
+      btn.textContent = 'Connect';
+    }
+  });
+</script>
+
+</body>
+</html>
+```
